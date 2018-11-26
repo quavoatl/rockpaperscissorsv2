@@ -24,7 +24,7 @@ var chooseWinner = function(player, cpu) {
   if (order[player] === order[cpu]) {
     return 'Tie! Try again?';
   }
-  if (order[player] === order[cpu-1]) {
+  if (order[player] === order[cpu+1]) {
     score++;
     return 'You won!';
 
@@ -52,8 +52,8 @@ var playerWeapon = playerChoice == 0 ?  'Rock' :
 
 
 if (playerChoice == 0) {playerWeapon = 'Rock'}
-else if (playerChoice == 1) {playerWeapon = "Paper"}
-else if ( playerChoice == 2) {playerWeapon = 'Scissors'}
+else if (playerChoice == 1) {playerWeapon = "Scissors"}
+else if ( playerChoice == 2) {playerWeapon = 'Paper'}
 else ( playerWeapon = 'Something went wrong') ;
 
 paragraph.innerText = `The computer chose: ${cpuChoice.text}. \nYou chose ${playerWeapon}. \n${result}. \n${score}`
